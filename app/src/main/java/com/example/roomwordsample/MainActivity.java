@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
 
 //      adding an observer for LiveData returned by getAllWords():
-        mWordViewModel.getmAllWords().observe(this, new Observer<List<Word>>() {
+        mWordViewModel.getAllWords().observe(this, new Observer<List<Word>>() {
             @Override
             public void onChanged(List<Word> words) {
 //              update cached copy of the words in the adapter when change is observed

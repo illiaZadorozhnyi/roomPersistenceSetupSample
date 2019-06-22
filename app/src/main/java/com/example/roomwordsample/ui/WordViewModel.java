@@ -20,14 +20,10 @@ public class WordViewModel extends AndroidViewModel {
         super(application);
 
         mRepository = new WordRepository(application);
-        mAllWords = mRepository.getAllAlphabetizedWords();
+        mAllWords = mRepository.getAllWords();
     }
 
-    public LiveData<List<Word>> getmAllWords() {
-        return mAllWords;
-    }
-
-    LiveData<List<Word>> getAllWords() {
+    public LiveData<List<Word>> getAllWords() {
         return mAllWords;
     }
 
